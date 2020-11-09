@@ -6,7 +6,7 @@
 
 1) **Fork and clone** this repository into your `W03D01` directory
 
-2) **Do:** [Classes & Donut Adventure]()
+2) **Do:** [Classes & Donut Adventure](classes-donut.md)
 
 3) **Submit:** via GitHub issues. Follow the instructions found in the [wiki](https://git.generalassemb.ly/SEIR-Margaret/class-recordings-and-info/blob/master/submitting-homework.md).
 
