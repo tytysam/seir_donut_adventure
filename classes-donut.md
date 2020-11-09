@@ -201,24 +201,17 @@ Your commit message should read something like: <br>
 
 ## Submission Guidelines
 
-- Submit your homework via github issues before the next class starts at 10AM and please remember to fill out the form!
+3) **Submit:** via GitHub issues. Follow the instructions found in the [wiki](https://git.generalassemb.ly/SEIR-Margaret/class-recordings-and-info/blob/master/submitting-homework.md).
 
 ## Hungry for More?
 
 Choose any:
 
 1. Make it into a game with an ending, until someone has 0 health left.
-
 1. Make a parent class that the hero and nemesis can inherit from (maybe call it Denizen)?
-
 1. Randomize the weapon choice in the fight method.
-
 1. Change to alert and prompts instead of using the console.
-
 1. Expand this to your heart's content! Sky is the limit!
-
-1. Finish your labs!
-
 
 ---
 
