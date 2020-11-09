@@ -1,5 +1,5 @@
 // ==================================
-// Classes & Donut Adventure
+// CREATING CLASSES - HAMSTERS & HUMANS
 // ==================================
 
 class Hamster {
@@ -41,24 +41,50 @@ class Person {
   greet() {
     console.log(`Hello! My name is ${this.name}.`);
   }
-  eat() {
-    this.weight++;
-    this.mood++;
+  eat(count, limit) {
+    while (count < limit) {
+      this.weight++;
+      this.mood++;
+      count++;
+    }
   }
-  exercise() {
-    this.weight--;
+  exercise(count, limit) {
+    while (count < limit) {
+      this.weight--;
+      count++;
+    }
   }
-  ageUp() {
-    this.age++;
-    this.height++;
-    this.weight++;
-    this.mood--;
-    this.bankAccount += 10;
+  ageUp(count, limit) {
+    while (count < limit) {
+      this.age++;
+      this.height++;
+      this.weight++;
+      this.mood--;
+      this.bankAccount += 10;
+      count++;
+    }
   }
   buyHamster(hamster) {
-    const newHamster = new Hamster(hamster);
-    this.hamsters.push(newHamster);
+    this.hamsters.push(hamster);
     this.mood += 10;
-    this.bankAccount -= getPrice();
+    this.bankAccount -= hamster.getPrice();
   }
 }
+
+// ===========================================
+
+const timmy = new Person("Timmy");
+timmy.ageUp(0, 5);
+timmy.eat(0, 5);
+timmy.exercise(0, 5);
+timmy.ageUp(5, 14);
+
+const gus = new Hamster("Gus");
+gus.owner = "Timmy";
+timmy.buyHamster(gus);
+timmy.ageUp(14, 29);
+timmy.eat(0, 2);
+timmy.exercise(0, 2);
+
+console.log(timmy);
+console.log(gus);
