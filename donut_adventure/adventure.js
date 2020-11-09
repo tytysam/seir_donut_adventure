@@ -27,10 +27,20 @@ class Hero {
     console.log(this.catchPhrases[randomization(this.catchPhrases.length)]);
   }
   announceHealth() {
-    console.log(this.health);
+    console.log(`Dougie currently has ${this.health} hitpoints.`);
   }
-  fight() {
-    console.log(`I'm ready to rumble!`);
+  fight(enemy) {
+    if (Math.random() > 0.5) {
+      enemy.health = enemy.health - this.weapons.sprinkleSpray;
+      console.log(
+        `${enemy.name} got hit by Sprinkle Spray! His hitpoints have dropped to ${enemy.health}.`
+      );
+    } else {
+      enemy.health = enemy.health - this.weapons.sugarShock;
+      console.log(
+        `${enemy.name} got hit by Sugar Shock! His hitpoints have dropped to ${enemy.health}.`
+      );
+    }
   }
 }
 
@@ -51,12 +61,33 @@ class Enemy {
     console.log(this.catchPhrases[randomization(this.catchPhrases.length)]);
   }
   announceHealth() {
-    console.log(this.health);
+    console.log(`Pizza Rat currently has ${this.health} hitpoints.`);
   }
-  fight() {
-    console.log(`I'm gonna flatten you like a slice of pepperoni!`);
+  fight(enemy) {
+    if (Math.random() > 0.5) {
+      enemy.health = enemy.health - this.weapons.pepperoniStars;
+      console.log(
+        `${enemy.name} got hit by Pepperoni Stars! His hitpoints have dropped to ${enemy.health}.`
+      );
+    } else {
+      enemy.health = enemy.health - this.weapons.cheeseGrease;
+      console.log(
+        `${enemy.name} got hit by Cheese Grease! His hitpoints have dropped to ${enemy.health}.`
+      );
+    }
   }
 }
 
 const dougie = new Hero("Dougie");
 const pizzaRat = new Enemy("Pizza Rat");
+
+dougie.talkSass();
+pizzaRat.talkSmack();
+dougie.announceHealth();
+pizzaRat.announceHealth();
+
+dougie.fight(pizzaRat);
+pizzaRat.fight(dougie);
+
+dougie.announceHealth();
+pizzaRat.announceHealth();
